@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>整理整頓の提案システム</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>整理整頓の提案システム</h1>
+  </header>
+
+  <main>
+
+    <section class="input-section">
+
+      <h2>入力</h2>
+
+      <label class="input-label">写真をアップロード（任意）</label>
+      <input type="file" id="imageInput" accept="image/*">
+
+      <label class="input-label">または テキストで状況を入力</label>
+      <textarea id="promptInput" placeholder="例：デスク周りを美しく整理したい"></textarea>
+
+      <label class="input-label">優先モードを選択</label>
+      <div class="radio-group">
+        <label><input type="radio" name="mode" value="cheap"> 安さ重視</label>
+        <label><input type="radio" name="mode" value="easy"> 簡単さ重視</label>
+        <label><input type="radio" name="mode" value="beauty" checked> 美しさ重視</label>
+      </div>
+
+      <button id="generateBtn">提案を作る</button>
+
+    </section>
+
+    <section class="output-section">
+      <h2>提案結果</h2>
+      <div id="outputArea"></div>
+    </section>
+
+  </main>
+
+</body>
+<script src="app.js"></script>
+</html>
